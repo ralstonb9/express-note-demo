@@ -1,8 +1,13 @@
+const path = require('path')
 const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
 
 module.exports = app => {
     app.get('/api/notes', (req, res) => {
-        fs.readFile(path.join(__dirname, './db/db.json')).then((data) => res.json(JSON.parse(data)))
+        fs.readFile(path.join(__dirname, '../db/db.json'), 'utf8', (err, data) => {
+            if (err) throw err;
+            res.json(JSON.parse(data))
+        });
     });
     
     app.post('/api/notes', (req, res) => {
@@ -12,18 +17,18 @@ module.exports = app => {
             const newPost = {
                 title,
                 text,
-                id: uuid(),
+                id: uuidv4(),
             };
             
-            // fs.readFile(path.join(__dirname, './db/db.json'), 'utf8', (err, data) => {
+            fs.readFile(path.join(__dirname, '../db/db.json'), 'utf8', (err, data) => {
              const parsedPosts = JSON.parse(data);
-            //     parsedPosts.push(newPost);
-            // });
-        
-            fs.writeFile(path.join(__dirname, './db/db.json'), JSON.stringify(parsedPosts, null, 2), (err) => {
-                if (err) throw err;
-                res.json(newPost);
+             parsedPosts.push(newPost);
+             fs.writeFile(path.join(__dirname, '../db/db.json'), JSON.stringify(parsedPosts, null, 2), (err) => {
+                 if (err) throw err;
+                 res.json(newPost);
+             });
             });
+        
         }
     });
     
