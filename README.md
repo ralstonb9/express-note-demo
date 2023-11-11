@@ -7,6 +7,7 @@ In this weeks assignment we were given code for a note taker application with th
 ## Table of Contents
 - [Description](#description)
 - [Screenshot](#screenshot)
+- [Deployed Link](#deployedlink)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tests](#tests)
@@ -14,7 +15,9 @@ In this weeks assignment we were given code for a note taker application with th
 
 ## Screenshot
 
-![Express Note Taker]()
+![Express Note Taker](/public/assets/images/express-note-taker.png)
+
+## Deployed Link
 
 ## Installation
 
