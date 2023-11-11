@@ -7,7 +7,7 @@ In this weeks assignment we were given code for a note taker application with th
 ## Table of Contents
 - [Description](#description)
 - [Screenshot](#screenshot)
-- [Deployed Link](#deployedlink)
+- [Deployed Link](#deployed-link)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tests](#tests)
