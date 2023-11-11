@@ -35,5 +35,16 @@ module.exports = app => {
     app.delete('/api/notes/:id', (req,res) => {
         const noteId = req.params.id;
         console.log('this is the noteId', noteId);
+        fs.readFile(path.join(__dirname, '../db/db.json'), 'utf8', (err, data) => {
+            if (err) throw err;
+    
+            let notes = JSON.parse(data);
+            notes = notes.filter(note => note.id !== noteId);
+            
+            fs.writeFile(path.join(__dirname, '../db/db.json'), JSON.stringify(notes, null, 2), (err) => {
+                if (err) throw err;
+                res.json({message: "Note deleted"});
+            });
+        });
     });
 };

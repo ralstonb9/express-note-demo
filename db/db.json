@@ -1,11 +1,12 @@
 [
   {
-    "title": "Test Title",
-    "text": "Test text"
-  },
-  {
     "title": "Homework",
     "text": "Complete homework",
     "id": "41ed80ec-ece7-48eb-b5d2-a2cc83a5872f"
+  },
+  {
+    "title": "Project Ideas",
+    "text": "1. Online Dating App\n2. Online App for connecting Musical artists",
+    "id": "0dd81337-6484-4241-859a-e51582c1a2a2"
   }
 ]
