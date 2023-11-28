@@ -19,6 +19,8 @@ In this weeks assignment we were given code for a note taker application with th
 
 ## Deployed Link
 
+https://express-note-demo-3ec9da6e3a2b.herokuapp.com/
+
 ## Installation
 
 For this application there is no installation required, simply got to the deployed Heroku link and begin using the application.
